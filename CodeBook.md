@@ -8,6 +8,7 @@ This file explains the behavior of run_analysis.R script.
 1. The script assumes that the dataset to be analyzed is already downloaded, and the script is running on the root of the dataset.
 2. The script requires the library dplyr to be available
 3. It first procceeds to read the data on the files below (with their specific relative paths) files and load them on corresponding temp variables:
+
 * ./test/X_test.txt
 * ./test/Y_test.txt
 * ./test/subject_test.txt
@@ -16,8 +17,10 @@ This file explains the behavior of run_analysis.R script.
 * ./train/subject_train.txt
 * ./features.txt
 * ./activity_labels.txt
+
 4. It continues to merge all the temp variables from test and train datasets
 5. It filters only the variables corresponding to mean() and std() calculations. The resulting variables are the followings:
+
 * tBodyAcc-XYZ
 * tGravityAcc-XYZ
 * tBodyAccJerk-XYZ
@@ -35,6 +38,7 @@ This file explains the behavior of run_analysis.R script.
 * fBodyBodyAccJerkMag
 * fBodyBodyGyroMag
 * fBodyBodyGyroJerkMag
+
 6. It set descriptive activity names to the activities in the corresponding temp variable
 7. It then merges all the temp variables to a unique data frame
 8. It uses dplyr functions to group the data frame by Activity and Subject variables
